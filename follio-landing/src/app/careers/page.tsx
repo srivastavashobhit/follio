@@ -1,5 +1,5 @@
-// src/app/careers/page.tsx
 import React from "react";
+import JobCard from "@/components/JobCard";
 
 export default function CareersPage() {
   return (
@@ -12,26 +12,19 @@ export default function CareersPage() {
         </p>
       </section>
 
-      <section className="max-w-3xl mx-auto">
-        {/* Job Postings */}
-        <div className="space-y-8">
-          {/* Example Job */}
-          <div className="p-6 rounded-xl border border-gray-200 shadow-sm">
-            <h2 className="text-2xl font-semibold">Frontend Engineer</h2>
-            <p className="text-gray-700 mb-4">Remote · Full-Time</p>
-            <p className="text-gray-600 mb-4">
-              Help us build beautiful, performant web interfaces for creators and startups around the world.
-            </p>
-            <a
-              href="mailto:jobs@follio.net?subject=Application: Frontend Engineer"
-              className="inline-block text-sm font-medium text-white bg-follio-blue hover:bg-follio-teal transition px-4 py-2 rounded-md"
-            >
-              Apply Now
-            </a>
-          </div>
-
-          {/* Add more job blocks here */}
-        </div>
+      <section className="max-w-3xl mx-auto space-y-8">
+        <JobCard
+          title="Software Engineer Intern Full Stack"
+          location="Remote · Full-Time"
+          description="Help us build beautiful, performant web interfaces for creators and startups around the world."
+          applyUrl="https://join.com/companies/follionet/14256571?utm_medium=social_sharing&utm_source=copy_link"
+        />
+        <JobCard
+          title="Product Manager Intern"
+          location="Remote · Full-Time"
+          description="Craft intuitive, elegant user experiences and collaborate closely with our product and engineering team."
+          applyUrl="https://join.com/companies/follionet/14259362?utm_medium=social_sharing&utm_source=copy_link"
+        />
       </section>
     </main>
   );
